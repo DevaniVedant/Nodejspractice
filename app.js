@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 app.get('/contact', (req, res) => {
-    res.render('contact')
+    res.render('contact', {qs: req.query})
 })
 
 app.get('/profile/:name', (req, res) => {
@@ -17,4 +17,4 @@ app.get('/profile/:name', (req, res) => {
     res.render('profile', { person: req.params.name, data })
 })
 
-app.listen(3010)
+app.listen(3012)
