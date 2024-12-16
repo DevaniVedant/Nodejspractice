@@ -4,10 +4,10 @@ const app = express()
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-    res.sendFile(`${__dirname}/index.html`)
+    res.render('index')
 })
 app.get('/contact', (req, res) => {
-    res.sendFile(`${__dirname}/contact.html`)
+    res.render('contact')
 })
 
 app.get('/profile/:name', (req, res) => {
@@ -15,4 +15,4 @@ app.get('/profile/:name', (req, res) => {
     res.render('profile', { person: req.params.name, data })
 })
 
-app.listen(3008)
+app.listen(3009)
