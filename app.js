@@ -11,8 +11,8 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/profile/:name', (req, res) => {
-    const data = { age: 29, job: 'web developer' }
+    const data = { age: 29, job: 'web developer', hobbies: ['eating', 'fighting', 'fishing'] }
     res.render('profile', { person: req.params.name, data })
 })
 
-app.listen(3007)
+app.listen(3008)
