@@ -3,6 +3,8 @@ const app = express()
 
 app.set('view engine', 'ejs')
 
+app.use('/assets', express.static('assets'))
+
 app.get('/', (req, res) => {
     res.render('index')
 })
@@ -15,4 +17,4 @@ app.get('/profile/:name', (req, res) => {
     res.render('profile', { person: req.params.name, data })
 })
 
-app.listen(3009)
+app.listen(3010)
